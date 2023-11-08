@@ -3,7 +3,7 @@ package api.projeto.LOLentity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
-@Entity(name="campeão")
+@Entity(name="Product")
 public class Product {
 	@Id
 	private Long id;

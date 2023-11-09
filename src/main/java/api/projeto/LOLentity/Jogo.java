@@ -1,18 +1,31 @@
 package api.projeto.LOLentity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import java.util.UUID;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Data
 @Entity(name="jogo")
 public class Jogo {
 	@Id
-	private Long id;
-	private String name;
-	private double price;
+    @GeneratedValue(generator = "UUID")
+    private UUID id;
+
+    @Column(unique = true)
+	private String partida;
+	private String participantes;
+	
 	
 	//getters e setters
-	public Jogo() {
-		// TODO Auto-generated constructor stub
-	}
+	
 
 }

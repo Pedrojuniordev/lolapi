@@ -1,5 +1,11 @@
 package api.projeto.LOL.repository;
 
-public interface RepositoryCliente {
+import java.util.UUID;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import api.projeto.LOLentity.Cliente;
+
+public interface RepositoryCliente extends JpaRepository<Cliente, UUID> {
 
 }

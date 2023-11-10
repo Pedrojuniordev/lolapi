@@ -1,14 +1,28 @@
 package api.projeto.LOL.controler;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import api.projeto.LOL.repository.RepositoryJogo;
+import api.projeto.LOLentity.Jogo;
+import jakarta.servlet.http.HttpServletRequest;
 
 @RestController
 @RequestMapping("/jogo")
 public class ControlerJogo {
 
-	public ControlerJogo() {
-		// TODO Auto-generated constructor stub
+	@Autowired
+	private RepositoryJogo repositoryJogo;
+	
+	@PostMapping("/cadastrar")
+	public ResponseEntity salvarJogo(@RequestBody Jogo jogo, HttpServletRequest request) {
+		
+		return ResponseEntity.status(HttpStatus.OK).body("jogo criado com sucesso");
 	}
 
 }

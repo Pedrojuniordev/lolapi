@@ -1,4 +1,5 @@
-package api.projeto.LOLentity;
+package api.projeto.LOL.entitys;
+
 
 import java.util.UUID;
 
@@ -19,20 +20,21 @@ import lombok.NoArgsConstructor;
 @Table(name="campeão")
 public class Campeão {
 
-	@Id
+    @Id
     @GeneratedValue(generator = "UUID")
     private UUID id;
 
     @Column(unique = true)
-	private String nome;
-	private double preço;
-	private String level;
-	private Integer xp;
-	private String habilidade;
-	private Integer tempodefabricacao;
-	
-	
-	//getters e setters
-	
+    private String nome;
+    private double preço;
+    private String level;
+    private Integer xp;
+    private String habilidade;
+    private Integer tempodefabricacao;
+
+
+    //getters e setters
+
 
 }
+

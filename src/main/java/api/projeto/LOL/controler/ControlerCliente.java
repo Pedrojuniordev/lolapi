@@ -1,5 +1,6 @@
 package api.projeto.LOL.controler;
 
+import api.projeto.LOL.entitys.Cliente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import api.projeto.LOL.repository.RepositoryCliente;
-import api.projeto.LOLentity.Cliente;
 import jakarta.servlet.http.HttpServletRequest;
 
 @RestController

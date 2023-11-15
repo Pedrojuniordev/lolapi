@@ -5,11 +5,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ServiceCampeao {
-	@Autowired
 
-	
-	public ServiceCampeao() {
-		// TODO Auto-generated constructor stub
-	}
+
 
 }

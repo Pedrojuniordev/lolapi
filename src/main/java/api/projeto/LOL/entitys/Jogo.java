@@ -1,4 +1,5 @@
-package api.projeto.LOLentity;
+package api.projeto.LOL.entitys;
+
 
 import java.util.UUID;
 
@@ -16,16 +17,16 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity(name="jogo")
 public class Jogo {
-	@Id
+    @Id
     @GeneratedValue(generator = "UUID")
     private UUID id;
 
     @Column(unique = true)
-	private String partida;
-	private String participantes;
-	
-	
-	//getters e setters
-	
+    private String partida;
+    private String participantes;
+
+
+    //getters e setters
+
 
 }

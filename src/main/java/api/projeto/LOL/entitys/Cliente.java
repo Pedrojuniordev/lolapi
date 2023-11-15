@@ -1,4 +1,5 @@
-package api.projeto.LOLentity;
+package api.projeto.LOL.entitys;
+
 
 import java.util.UUID;
 
@@ -16,21 +17,16 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity(name="cliente")
 public class Cliente {
-	@Id
+    @Id
     @GeneratedValue(generator = "UUID")
     private UUID id;
 
     @Column(unique = true)
-	private String nome;
-	private String pais;
-	private String email;
-	private String datanascimento;
-	private String senha;
-	
-
-	//getters e setters
-	public Cliente() {
-		// TODO Auto-generated constructor stub
-	}
+    private String nome;
+    private String pais;
+    private String email;
+    private String datanascimento;
+    private String senha;
 
 }
+

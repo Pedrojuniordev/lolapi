@@ -1,6 +1,5 @@
 package api.projeto.LOL.entitys;
 
-
 import java.util.UUID;
 
 import jakarta.persistence.Column;
@@ -31,10 +30,5 @@ public class Campeão {
     private Integer xp;
     private String habilidade;
     private Integer tempodefabricacao;
-
-
-    //getters e setters
-
-
 }
 

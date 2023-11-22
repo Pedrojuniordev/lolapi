@@ -17,9 +17,11 @@ import java.util.UUID;
 @RequestMapping("/campeão")
 public class ControlerCampeao {
 
+	// CHAMA O REPOSITORIO -> BANCO DE DADOS
 	@Autowired
 	private RepositoryCampeao repositoryCampeao;
 
+	// localhost:8082/campeão/cadastrar
 	// Método para cadastrar um campeão
 	@PostMapping("/cadastrar")
 	public ResponseEntity<String> salvarCampeao(@RequestBody Campeão campeão, HttpServletRequest request) {
@@ -27,6 +29,7 @@ public class ControlerCampeao {
 		return ResponseEntity.status(HttpStatus.OK).body("Campeão criado com sucesso");
 	}
 
+	// localhost:8082/campeão/listar
 	// Método para obter todos os campeões
 	@GetMapping("/listar")
 	public ResponseEntity<List<Campeão>> listarCampeoes() {
@@ -34,6 +37,7 @@ public class ControlerCampeao {
 		return ResponseEntity.status(HttpStatus.OK).body(campeoes);
 	}
 
+	// localhost:8082/campeão/buscar/3e88da4d-1074-479-9096-443c79f835f6 ( nao esqueça de pegar o novo id)
 	// Método para obter um campeão por ID
 	@GetMapping("/buscar/{id}")
 	public ResponseEntity<Campeão> buscarCampeao(@PathVariable UUID id) {
@@ -45,6 +49,7 @@ public class ControlerCampeao {
 		}
 	}
 
+	//
 	// Método para atualizar um campeão por ID
 	@PutMapping("/atualizar/{id}")
 	public ResponseEntity<String> atualizarCampeao(@PathVariable UUID id, @RequestBody Campeão campeão) {
@@ -58,6 +63,7 @@ public class ControlerCampeao {
 		}
 	}
 
+	// localhost:8082/campeão/excluir/3e88da4d-1074-4d79-9096-443c79f835f6 ( nao esqueça de pegar um novo id)
 	// Método para excluir um campeão por ID
 	@DeleteMapping("/excluir/{id}")
 	public ResponseEntity<String> excluirCampeao(@PathVariable UUID id) {

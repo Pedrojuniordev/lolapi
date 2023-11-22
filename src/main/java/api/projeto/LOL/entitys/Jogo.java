@@ -17,6 +17,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity(name="jogo")
 public class Jogo {
+
     @Id
     @GeneratedValue(generator = "UUID")
     private UUID id;
@@ -24,9 +25,5 @@ public class Jogo {
     @Column(unique = true)
     private String partida;
     private String participantes;
-
-
-    //getters e setters
-
 
 }
